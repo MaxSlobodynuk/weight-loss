@@ -1,0 +1,126 @@
+//footer
+.footer{
+	background: linear-gradient(136deg, rgba(246, 237, 237, 0.6) 0%, rgba(216, 224, 213, 0.6) 100%);
+	&__wrap{
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		padding: 14px 0 18px;
+	}
+	&-item{
+		flex: 0 0 33.333%;
+		max-width: 33.333%;
+		&__link{
+			font-size: 20px;
+			text-transform: none;
+			display: inline-block;
+			.underline{
+				&::before{
+					height: 2px;
+					bottom: -1px;
+					transition: all .3s;
+				}
+			}
+			&:hover{
+				.underline{
+					color: #ebb140;
+					&::before{
+						width: 0;
+					}
+				}
+			}
+		}
+		&:first-child{
+			text-align: left;
+			.footer-item__link{
+				text-align: left;
+			}
+		}
+		&:nth-child(2){
+			text-align: center;
+			.footer-item__link{
+				text-align: center;
+			}
+		}
+		&:last-child{
+			text-align: right;
+			.footer-item__link{
+				text-align: right;
+			}
+		}
+	}
+	&__bottom{
+		text-align: center;
+		font-size: 18px;
+		padding: 11px 0 17px;
+		color: rgba(0, 0, 0, 0.6);
+		border-top: 1px solid rgba(34, 32, 32, 0.5);
+		font-weight: 700;
+	}
+	&__business{
+		text-align: center;
+		color: rgba(0, 0, 0, 0.6);
+		font-size: 12px;
+		padding-bottom: 8px;
+		span{
+			display: block;
+			padding-bottom: 5px;
+		}
+		a{
+			color: rgba(0, 0, 0, 0.6);
+			text-decoration: underline;
+			&:hover{
+				color: #ebb140;
+			}
+		}
+	}
+}
+@media screen and (max-width: 767px){
+	.footer-item__link{
+		font-size: 19px;
+		.underline{
+			&::before{
+				display: none;
+			}
+		}
+		.green{
+			display: block;
+		}
+	}
+}
+@media screen and (max-width: 479px){
+	.footer__wrap{
+		padding-bottom: 14px;
+	}
+	.footer-item{
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding-top: 15px;
+		&__link{
+			font-size: 17px;
+		}
+		&:first-child{
+			text-align: center;
+			.footer-item__link {
+				text-align: center;
+			}
+		}
+		&:nth-child(2){
+			order: -1;
+			padding-top: 0;
+			svg{
+				max-width: 45px;
+			}
+		}
+		&:last-child{
+			text-align: center;
+			.footer-item__link {
+				text-align: center;
+			}
+		}
+	}
+	.footer__bottom {
+		font-size: 14px;
+		padding: 10px 0 13px;
+	}
+}

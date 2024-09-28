@@ -1,0 +1,119 @@
+.footer {
+  background: linear-gradient(136deg, rgba(246, 237, 237, 0.6) 0%, rgba(216, 224, 213, 0.6) 100%);
+}
+.footer__wrap {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 14px 0 18px;
+}
+.footer-item {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+}
+.footer-item__link {
+  font-size: 20px;
+  text-transform: none;
+  display: inline-block;
+}
+.footer-item__link .underline::before {
+  height: 2px;
+  bottom: -1px;
+  transition: all .3s;
+}
+.footer-item__link:hover .underline {
+  color: #ebb140;
+}
+.footer-item__link:hover .underline::before {
+  width: 0;
+}
+.footer-item:first-child {
+  text-align: left;
+}
+.footer-item:first-child .footer-item__link {
+  text-align: left;
+}
+.footer-item:nth-child(2) {
+  text-align: center;
+}
+.footer-item:nth-child(2) .footer-item__link {
+  text-align: center;
+}
+.footer-item:last-child {
+  text-align: right;
+}
+.footer-item:last-child .footer-item__link {
+  text-align: right;
+}
+.footer__bottom {
+  text-align: center;
+  font-size: 18px;
+  padding: 11px 0 17px;
+  color: rgba(0, 0, 0, 0.6);
+  border-top: 1px solid rgba(34, 32, 32, 0.5);
+  font-weight: 700;
+}
+.footer__business {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  padding-bottom: 8px;
+}
+.footer__business span {
+  display: block;
+  padding-bottom: 5px;
+}
+.footer__business a {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: underline;
+}
+.footer__business a:hover {
+  color: #ebb140;
+}
+@media screen and (max-width: 767px) {
+  .footer-item__link {
+    font-size: 19px;
+  }
+  .footer-item__link .underline::before {
+    display: none;
+  }
+  .footer-item__link .green {
+    display: block;
+  }
+}
+@media screen and (max-width: 479px) {
+  .footer__wrap {
+    padding-bottom: 14px;
+  }
+  .footer-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-top: 15px;
+  }
+  .footer-item__link {
+    font-size: 17px;
+  }
+  .footer-item:first-child {
+    text-align: center;
+  }
+  .footer-item:first-child .footer-item__link {
+    text-align: center;
+  }
+  .footer-item:nth-child(2) {
+    order: -1;
+    padding-top: 0;
+  }
+  .footer-item:nth-child(2) svg {
+    max-width: 45px;
+  }
+  .footer-item:last-child {
+    text-align: center;
+  }
+  .footer-item:last-child .footer-item__link {
+    text-align: center;
+  }
+  .footer__bottom {
+    font-size: 14px;
+    padding: 10px 0 13px;
+  }
+}

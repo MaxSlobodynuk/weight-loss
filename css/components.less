@@ -1,0 +1,83 @@
+//global style
+img, svg{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+i{
+	display: inline-block;
+}
+a{
+	transition: all .3s;
+	text-decoration: none;
+}
+.global-btn{
+	*>{
+		display: inline-block;
+		text-transform: uppercase;
+		background: #ebb140;
+		border-radius: 120px;
+		padding: 20px 39px;
+		font-family: "Roboto", sans-serif;
+		font-weight: 700;
+		font-size: 20px;
+		text-align: center;
+		color: #fff;
+		max-width: 300px;
+		box-shadow: 0 6px 0 rgba(235, 177, 64, 0.3);
+		transition: all .3s;
+		cursor: pointer;
+		&:hover{
+			box-shadow: none;
+		}
+	}
+}
+.global-title{
+	font-weight: 700;
+	font-size: 58px;
+	line-height: 1;
+	color: #25242b;
+	text-transform: uppercase;
+	text-align: center;
+	.green{
+		color: #ebb140;
+	}
+	.underline{
+		position: relative;
+		&::before{
+			content: '';
+			display: block;
+			width: 110%;
+			height: 5px;
+			border-radius: 20px;
+			background-color: #ebb140;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+@media screen and (max-width: 1699px){
+	.global-title{
+		font-size: 54px;
+	}
+}
+@media screen and (max-width: 1499px){
+
+}
+@media screen and (max-width: 1199px){
+	.global-title{
+		font-size: 51px;
+	}
+}
+@media screen and (max-width: 767px){
+	.global-title {
+		font-size: 48px;
+	}
+}
+@media screen and (max-width: 479px){
+	.global-title {
+		font-size: 43px;
+	}
+}
